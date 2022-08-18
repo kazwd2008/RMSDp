@@ -26,6 +26,13 @@
 #' @importFrom stats qchisq
 #' @importFrom stats median
 #' @importFrom stats qf
+#' @importFrom parallel   makeCluster
+#' @importFrom doParallel registerDoParallel
+#' @importFrom parallel   clusterSetRNGStream
+#' @importFrom parallel   clusterExport
+#' @importFrom parallel   stopCluster
+#' @importFrom foreach    foreach
+#' @importFrom foreach    %dopar%
 #' @export
 
 RMSDp <- function(inp, nb=0, sd=0, pt=0.999, dv=10000) {
@@ -184,7 +191,7 @@ orthonormalization <- function (u = NULL, basis = TRUE, norm = TRUE) {
 #    }
     if (prod(abs(La.svd(u)$d) > 1e-08) == 0) {		# added by wada
         warning("collinears vectors")			# added by wada
-        v <- matrix(0, nr=p, nc=p)			# added by wada
+        v <- matrix(0, nrow=p, ncol=p)			# added by wada
         diag(v) <- 1					# added by wada
         return(v)					# added by wada
     }    						# added by wada
