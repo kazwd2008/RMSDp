@@ -4,8 +4,8 @@ Title: Paralleled Version of Modified Stahel-Donoho (MSD) Estimators for Outlier
 Version: 0.1.0
 Depends: stats
 Imports: parallel, doParallel, foreach
-Authors@R: person(given="Kazumi", family="Wada", role=c("aut", "cre"), email = "kazwd2008@gmail.com", comment=c(ORCID="0000-0002-9578-1588"))
-Maintainer: WADA Kazumi <kazwd2008@gmail.com>
+Authors@R: person(given="Kazumi", family="Wada", role=c("aut", "cre"), email = "kazwd2008 at gmail.com", comment=c(ORCID="0000-0002-9578-1588"))
+Maintainer: WADA Kazumi <kazwd2008 at gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: GPL (>= 3)
