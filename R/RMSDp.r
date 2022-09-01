@@ -16,9 +16,9 @@
 #'   \item u  final mean vector
 #'   \item V  final covariance matrix
 #'   \item wt final weights
-#'   \item mah Mahalanobis distances of each observation
-#'   \item cf threshold to detect outliers (percentile point)
-#'   \item ot 1:normal observation, 2:outlier
+#'   \item mah squared squared Mahalanobis distances
+#'   \item cf threshold to detect outlier (percentile point)
+#'   \item ot outlier flag (1:normal observation, 2:outlier)
 #' }
 #' @importFrom stats mad
 #' @importFrom stats mahalanobis
