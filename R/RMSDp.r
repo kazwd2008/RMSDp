@@ -63,7 +63,7 @@ dv.cr <- ceiling(dv/cores/(inp.d^2))  #  Number of bases in a chunk
 bb.cr <- ceiling(bb.n / dv.cr)	 #  Number of chunks
 rn.cr <- dv.cr * inp.d^2         #  Number of elements which consists of bases in a chunk
 kijun 	<- qchisq(0.95, inp.d)   #  reference for trimming
-parallel::clusterExport(cl, "orthonormalization")
+parallel::clusterExport(cl, "RMSDp::orthonormalization")
 
 #-----------------------------------------------------------
 #  projection, residual and weights computation in parallel
@@ -174,7 +174,7 @@ orthonormalization <- function (u = NULL, basis = TRUE, norm = TRUE) {
     p <- nrow(u)
     n <- ncol(u)
 #    if (prod(abs(La.svd(u)$d) > 1e-08) == 0)
-#        stop("colinears vectors")
+#        stop("collinear vectors")
 #    if (p < n) {
 #        warning("too much vectors to orthogonalize.")
 #        u <- as.matrix(u[, 1:p])
