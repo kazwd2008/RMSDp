@@ -15,7 +15,7 @@ This function is an improved version of “msd.parallel” at https://github.com
 
 ## Installation
 
-You can install the released version of RMSD from [GitHub](https://github.com/kazwd2008) with:
+You can install the released version of RMSDp from [GitHub](https://github.com/kazwd2008) with:
 
 ``` r
 install.packages("devtools")
