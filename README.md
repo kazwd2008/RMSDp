@@ -22,47 +22,20 @@ install.packages("devtools")
 devtools::install_github("kazwd2008/RMSDp")
 ```
 
-## Example [13 variables]
+## Example: wine data [13 variables]
 
-This is an example with the wine data set from the UCI machine learning repository (https://archive.ics.uci.edu/ml/datasets/wine). Download "wine.data" in your current directory.
+This is an example with the wine data set from the UCI machine learning repository (https://archive.ics.uci.edu/ml/datasets/wine). Download "wine.data" in your current directory. The dataset contains 1 categorical variable and 13 numerical variables.
+
+RMSEp assumes an elliptical data distribution.
 
 ``` r
-library(RMSD)
-data(starsCYG, package="robustbase")
-ot1 <- RMSD(starsCYG)
+library(RMSDp)
+wine <- read.csv("wine.data", header=F)
+ot1 <- RMSD(wine[,-1])
 
-# scatterplot 
-plot(starsCYG, col=ot1$ot, pch=19, main="Scatterplot (outliers are shown in red)")
+# scatterplot with the outlier flag
+plot(wine, col=ot1$ot, pch=19, main="Scatterplot (outliers are shown in red)")
 
 # final weights
-plot(ot1$wt, col=ot1$ot, pch=19, main="Degree of Outlyingness")
-```
-
-## Example 2 [five variables]
-
-This is an example with Aircraft Data in robustbase package.
-
-Recommended thresholds for outlier detection for MSD estimators is 99.9 percentile point of F-statistics (pt=0.999).
-
-Without setting a same random seed, results (robust mean vector, covariance matrix, F-statistics and mahalanobis distance) of ot2 and ot3 may slightly differ.
-
-``` r
-library(RMSD)
-data(aircraft, package="robustbase")
-
-# Thresholds of outlier: 0.999 (F-statistics)
-ot2 <- RMSD(aircraft, sd=2)
-pairs(aircraft, pch=19, col=ot2$ot)
-
-# Thresholds of outlier: 0.95 (F-statistics)
-ot3 <- RMSD(aircraft, sd=2, pt=0.95)
-pairs(aircraft, pch=19, col=ot3$ot)
-
-# See if the results are the same
-sum(abs(ot2$mah-ot3$mah))
-
-# Effect of different thresholds
-plot(ot2$FF, col=(ot2$ot+ot3$ot-1), pch=19, main="Test statistics")
-abline(h=ot2$cf, col="blue", lty=3)
-abline(h=ot3$cf, col="cyan", lty=3)
+plot(ot1$wt, pch=19, col=ot1$ot)
 ```
