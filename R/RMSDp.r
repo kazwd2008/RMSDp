@@ -63,7 +63,7 @@ dv.cr <- ceiling(dv/cores/(inp.d^2))  #  Number of bases in a chunk
 bb.cr <- ceiling(bb.n / dv.cr)	 #  Number of chunks
 rn.cr <- dv.cr * inp.d^2         #  Number of elements which consists of bases in a chunk
 kijun 	<- qchisq(0.95, inp.d)   #  reference for trimming
-parallel::clusterExport(cl, "RMSDp::orthonormalization")
+parallel::clusterExport(cl, "orthonormalization")
 
 #-----------------------------------------------------------
 #  projection, residual and weights computation in parallel
