@@ -22,9 +22,9 @@ install.packages("devtools")
 devtools::install_github("kazwd2008/RMSDp")
 ```
 
-## Example 1 [two variables]
+## Example [13 variables]
 
-This is an example with CYG OB1 Star Cluster Data in robustbase package.
+This is an example with the wine data set from the UCI machine learning repository (https://archive.ics.uci.edu/ml/datasets/wine). Download "wine.data" in your current directory.
 
 ``` r
 library(RMSD)
