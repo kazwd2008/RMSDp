@@ -31,7 +31,7 @@ RMSEp assumes an elliptical data distribution.
 ``` r
 library(RMSDp)
 wine <- read.csv("wine.data", header=F)
-ot1 <- RMSD(wine[,-1])
+ot1 <- RMSDp(wine[,-1])
 
 # scatterplot with the outlier flag
 plot(wine, col=ot1$ot, pch=19, main="Scatterplot (outliers are shown in red)")
