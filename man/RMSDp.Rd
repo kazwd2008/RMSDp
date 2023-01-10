@@ -2,7 +2,7 @@
 % Please edit documentation in R/RMSDp.r
 \name{RMSDp}
 \alias{RMSDp}
-\title{Modified Stahel-Donoho Estimators (paralleled version)}
+\title{Modified Stahel-Donoho Estimators (parallel version)}
 \usage{
 RMSDp(inp, nb = 0, sd = 0, pt = 0.999, dv = 10000)
 }
