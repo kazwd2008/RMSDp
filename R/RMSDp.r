@@ -1,5 +1,5 @@
 #----------------------------------------------------------
-#' Modified Stahel-Donoho Estimators (paralleled version)
+#' Modified Stahel-Donoho Estimators (parallel version)
 #'
 #' This function is for multivariate outlier detection.
 #'     Ver.3.1 2013/06/15  Related paper: DOI: 10.1109/CLOUDCOM-ASIA.2013.86
