@@ -4,12 +4,11 @@ Title: Refined Modified Stahel-Donoho (MSD) Estimators for Outlier Detection (Pa
 Version: 0.1.0
 Depends: stats
 Imports: parallel, doParallel, foreach
-Authors@R: person(given="Kazumi", family="Wada", role=c("aut", "cre"), email = "kazwd2008@gmail.com", comment=c(ORCID="0000-0002-9578-1588"))
+Author: person(given="Kazumi", family="Wada", role=c("aut", "cre"), email = "kazwd2008@gmail.com", comment=c(ORCID = "0000-0002-9578-1588")).
 Maintainer: WADA Kazumi <kazwd2008@gmail.com>
 Description: 
     A parallel function for multivariate outlier detection named modified Stahel-Donoho estimators is contained.  The function is for elliptically distributed datasets and recognizes outliers based on Mahalanobis distance. 
-    The function is for higher dimensional datasets that cannot be handled by a single core function included in RMSD.  See Wada and Tsubaki (2013) <DOI: 10.1109/CLOUDCOM-ASIA.2013.86> for the detail of the algorithm. 
+    The function is for higher dimensional datasets that cannot be handled by a single core function included in RMSD.  See Wada and Tsubaki (2013) <doi:10.1109/CLOUDCOM-ASIA.2013.86> for the detail of the algorithm. 
 License: GPL (>= 3)
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.2.1
