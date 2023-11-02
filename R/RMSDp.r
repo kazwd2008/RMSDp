@@ -1,12 +1,13 @@
 #----------------------------------------------------------
 #' Modified Stahel-Donoho Estimators (parallel version)
 #'
+
 #' This function is for multivariate outlier detection.
-#'     Ver.3.1 2013/06/15  Related paper: DOI: 10.1109/CLOUDCOM-ASIA.2013.86
-#'     Ver.3.2 2021/11/15  Outlier detection step added
-#'     Ver.3.3 2022/08/12  Bug fixed about Rondom seed setting
+#'     version 0.0.1 2013/06/15  Related paper: DOI: 10.1109/CLOUDCOM-ASIA.2013.86
+#'     version 0.0.2 2021/11/15  Outlier detection step added
+#'     version 0.0.3 2022/08/12  Bug fixed about Random seed setting
 #'
-#' @param inp imput data (a numeric matrix)
+#' @param inp input data (a numeric matrix)
 #' @param nb  number of basis
 #' @param sd  seed (for reproducibility)
 #' @param pt  threshold for outlier detection (probability)
