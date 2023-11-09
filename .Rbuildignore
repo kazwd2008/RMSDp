@@ -3,3 +3,4 @@
 .gitignore
 RMSDp.Rproj
 ^\.git$
+^cran-comments\.md$
