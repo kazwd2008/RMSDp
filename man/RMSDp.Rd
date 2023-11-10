@@ -4,10 +4,12 @@
 \alias{RMSDp}
 \title{Modified Stahel-Donoho Estimators (parallel version)}
 \usage{
-RMSDp(inp, nb = 0, sd = 0, pt = 0.999, dv = 10000)
+RMSDp(inp, cores = 0, nb = 0, sd = 0, pt = 0.999, dv = 10000)
 }
 \arguments{
 \item{inp}{input data (a numeric matrix)}
+
+\item{cores}{number of cores used for this function}
 
 \item{nb}{number of basis}
 
@@ -30,7 +32,7 @@ a list of the following information
 }
 \description{
 This function is for multivariate outlier detection.
-    Ver.3.1 2013/06/15  Related paper: DOI: 10.1109/CLOUDCOM-ASIA.2013.86
-    Ver.3.2 2021/11/15  Outlier detection step added
-    Ver.3.3 2022/08/12  Bug fixed about Random seed setting
+    version 0.0.1 2013/06/15  Related paper: DOI: 10.1109/CLOUDCOM-ASIA.2013.86
+    version 0.0.2 2021/11/15  Outlier detection step added
+    version 0.0.3 2022/08/12  Bug fixed about Random seed setting
 }

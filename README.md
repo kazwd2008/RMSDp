@@ -37,4 +37,8 @@ plot(wine, col=ot1$ot, pch=19, main="Scatterplot (outliers are shown in red)")
 
 # final weights
 plot(ot1$wt, pch=19, col=ot1$ot)
+
+# parallel coordinate plot
+MASS::parcoord(wine[,-1], col=ot1$ot, lty=c(3,1)[ot1$ot], lwd=c(1,2)[ot1$ot])
+
 ```

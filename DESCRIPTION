@@ -3,7 +3,10 @@ Type: Package
 Title: Refined Modified Stahel-Donoho (MSD) Estimators for Outlier Detection (Parallel Version)
 Version: 0.1.0
 Depends: stats
-Imports: parallel, doParallel, foreach
+Imports: 
+    parallel,
+    doParallel,
+    foreach
 Authors@R: person(given="Kazumi", family="Wada", role=c("aut", "cre"), email = "kazwd2008@gmail.com", comment=c(ORCID = "0000-0002-9578-1588"))
 Description: 
     A parallel function for multivariate outlier detection named modified Stahel-Donoho estimators is contained.  The function is for elliptically distributed datasets and recognizes outliers based on Mahalanobis distance. 
@@ -11,7 +14,7 @@ Description:
 License: GPL (>= 3)
 Encoding: UTF-8
 Language: en-US
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

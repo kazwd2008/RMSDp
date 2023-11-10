@@ -8,6 +8,7 @@
 #'     version 0.0.3 2022/08/12  Bug fixed about Random seed setting
 #'
 #' @param inp input data (a numeric matrix)
+#' @param cores  number of cores used for this function
 #' @param nb  number of basis
 #' @param sd  seed (for reproducibility)
 #' @param pt  threshold for outlier detection (probability)
@@ -36,7 +37,7 @@
 #' @importFrom foreach    %dopar%
 #' @export
 
-RMSDp <- function(inp, nb=0, sd=0, pt=0.999, dv=10000) {
+RMSDp <- function(inp, cores=0, nb=0, sd=0, pt=0.999, dv=10000) {
  inp.d <- ncol(inp)        			# number of variables
  inp.n <- nrow(inp)        			# number of observations
 
@@ -46,7 +47,7 @@ RMSDp <- function(inp, nb=0, sd=0, pt=0.999, dv=10000) {
 #  doParallel with foreach, iterators, and parallel required
 
   type <- if (exists("mcfork", mode="function")) "FORK" else "PSOCK"
-    cores <- getOption("mc.cores", parallel::detectCores())
+    if (cores == 0) cores <- getOption("mc.cores", parallel::detectCores())
     cl <- parallel::makeCluster(cores, type=type)
     doParallel::registerDoParallel(cl)
   RNGkind("L'Ecuyer-CMRG")
