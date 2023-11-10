@@ -2,7 +2,10 @@ Package: RMSDp
 Type: Package
 Title: Refined Modified Stahel-Donoho (MSD) Estimators for Outlier Detection (Parallel Version)
 Version: 0.1.0
-Depends: stats
+Suggests: 
+    testthat (>= 3.0.0)
+Depends: 
+    stats
 Imports: 
     parallel,
     doParallel,
@@ -15,6 +18,4 @@ License: GPL (>= 3)
 Encoding: UTF-8
 Language: en-US
 RoxygenNote: 7.2.3
-Suggests: 
-    testthat (>= 3.0.0)
 Config/testthat/edition: 3

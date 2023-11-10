@@ -1,4 +1,3 @@
-
 # download wine dataset from UCI Machine Learning Repository 
 # 174 recordes, 14 variables
 
