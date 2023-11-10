@@ -5,6 +5,8 @@
 
 The package RMSDp contains a function RMSDp. It aims to provide a tool for multivariate outlier detection based on the Modified Stahel-Donoho estimators to cope with higher dimensional datasets than the function RMSD in the package RMSD. On the other hand, the function RMSD is faster than the function RMSDp for lower dimensional datasets.
 
+The parameter "cores" is for controlling number of cores used for the computation.  If this parameter is omitted, all the cores are used.
+
 Since the functions RMSDp uses random numbers, the results between runs could differ unless a random seed is provided using the parameter “sd.”
 
 The default threshold set to decide outlier is 99.9 percentile point of F-statistics. It can be changed using the parameter “pt.”
@@ -28,9 +30,12 @@ This is an example with the wine data set from the UCI machine learning reposito
 RMSEp assumes an elliptical data distribution.
 
 ``` r
+# number of cores of your PC
+getOption("mc.cores", parallel::detectCores())
+
 library(RMSDp)
 wine <- read.csv("wine.data", header=F)
-ot1 <- RMSDp(wine[,-1])
+ot1 <- RMSDp(wine[,-1], cores=2)
 
 # scatterplot with the outlier flag
 plot(wine, col=ot1$ot, pch=19, main="Scatterplot (outliers are shown in red)")
