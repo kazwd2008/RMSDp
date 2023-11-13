@@ -24,6 +24,7 @@ The package RMSDP is on CRAN.
 ``` r
 install.packages("RMSDps")
 library(RMSDp)
+```
 
 ### from github
 
