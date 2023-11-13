@@ -2,7 +2,7 @@
 # 174 recordes, 14 variables
 
 tmp <- tempfile()
-download.file("https://archive.ics.uci.edu/static/public/109/wine.zip", tmp)
+download.file("http://archive.ics.uci.edu/static/public/109/wine.zip", tmp)
 wine <- read.csv(unz(tmp, "wine.data"), header=F)
 
 o1 <- RMSDp(wine[,-1], cores=2)
