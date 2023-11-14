@@ -5,13 +5,13 @@
 
 The package RMSDp contains a function RMSDp. It aims to provide a tool for multivariate outlier detection based on the Modified Stahel-Donoho estimators to cope with higher dimensional datasets than the function RMSD in the package RMSD. On the other hand, the function RMSD is faster than the function RMSDp for lower dimensional datasets.
 
-The parameter "cores" is for controlling number of cores used for the computation.  If this parameter is omitted, all the cores are used.
+The parameter 'cores' is for controlling number of cores used for the computation.  If this parameter is omitted, all the cores are used.
 
-Since the functions RMSDp uses random numbers, the results between runs could differ unless a random seed is provided using the parameter “sd.”
+Since the functions RMSDp uses random numbers, the results between runs could differ unless a random seed is provided using the parameter 'sd.'
 
-The default threshold set to decide outlier is 99.9 percentile point of F-statistics. It can be changed using the parameter “pt.”
+The default threshold set to decide outlier is 99.9 percentile point of F-statistics. It can be changed using the parameter 'pt.'
 
-This function is an improved version of “msd.parallel” at https://github.com/kazwd2008/MSD.parallel by adding the last step to decide outliers by calculating the squared Mahalanobis distance of each observation and F-statistics to decide outliers.
+This function is an improved version of 'msd.parallel' at https://github.com/kazwd2008/MSD.parallel by adding the last step to decide outliers by calculating the squared Mahalanobis distance of each observation and F-statistics to decide outliers.
 
 
 ## Installation
@@ -37,7 +37,7 @@ devtools::install_github("kazwd2008/RMSDp")
 
 ## Example: wine data [13 variables]
 
-This is an example with the wine data set from the UCI machine learning repository (https://archive.ics.uci.edu/ml/datasets/wine). Download "wine.data" in your current directory. The dataset contains 1 categorical variable and 13 numerical variables.
+This is an example with the wine data set from the UCI machine learning repository (https://archive.ics.uci.edu/ml/datasets/wine). Download 'wine.data' in your current directory. The dataset contains 1 categorical variable and 13 numerical variables.
 
 RMSEp assumes an elliptical data distribution.
 
