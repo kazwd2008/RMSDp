@@ -1,7 +1,7 @@
 Package: RMSDp
 Type: Package
 Title: Refined Modified Stahel-Donoho (MSD) Estimators for Outlier Detection (Parallel Version)
-Version: 0.1.0
+Version: 0.1.1
 Suggests: 
     testthat (>= 3.0.0)
 Depends: 
