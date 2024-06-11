@@ -5,6 +5,7 @@ Version: 0.1.0
 Suggests: 
     testthat (>= 3.0.0)
 Depends: 
+    R (>= 2.10),
     stats
 Imports: 
     parallel,
@@ -16,5 +17,6 @@ Description:
 License: GPL (>= 3)
 Encoding: UTF-8
 Language: en-US
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Config/testthat/edition: 3
+LazyData: true
